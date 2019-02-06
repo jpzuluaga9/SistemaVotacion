@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elecciones por blockchain</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div id="app" class="container-fluid">
+    <header id="title-container">
+      <h1 v-text="titulo">...</h1>
+    </header>
+    <div class="row" id="candidates-container">
+      <div class="candidate-container" v-on:click="votar('1acH456Hf34FF')">
+        <h5 v-text="candidatos[0].name">...</h5>
+        <p v-text="candidatos[0].votes">...</p>
+      </div>
+      <div class="candidate-container" v-on:click="votar('2ah433F4c34CCaD23')">
+        <h5 v-text="candidatos[1].name">...</h5>
+        <p v-text="candidatos[1].votes">...</p>
+      </div>
+      <div class="candidate-container" v-on:click="votar('3aF3dc23C3hH21Ee')">
+        <h5 v-text="candidatos[2].name">...</h5>
+        <p v-text="candidatos[2].votes">...</p>
+      </div>
+      <div class="candidate-container" v-on:click="votar('4afA34C3Dd854H344eF')">
+        <h5 v-text="candidatos[3].name">...</h5>
+        <p v-text="candidatos[3].votes">...</p>
+      </div>
+      <div class="candidate-container" v-on:click="votar('4aA2e546HfcD24FFe3')">
+        <h5 v-text="candidatos[4].name">...</h5>
+        <p v-text="candidatos[4].votes">...</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
